@@ -10,6 +10,11 @@ ENV BITS='2048' \
   DAYS='365' \
   FQDN="jenkins.churchoffoxx.net"
 
+# Install packages
+RUN apt-get update && \
+  apt-get install -y \
+    openssl
+
 # Add scripts and configs
 COPY scripts/ /usr/local/bin/
 RUN chmod 755 /usr/local/bin/*
