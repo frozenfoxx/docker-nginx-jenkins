@@ -41,16 +41,10 @@ usage()
 # Logic
 
 ## Argument parsing
-while [[ "$1" != "" ]]; do
-  case $1 in
-    -h | --help ) usage
-                  exit 0
-                  ;;
-    * )           usage
-                  exit 1
-  esac
-  shift
-done
+if [[ $1 == "-h" ]]; then
+  usage
+  exit 0
+fi
 
 ## Run nginx with available options
 generate_ssl
