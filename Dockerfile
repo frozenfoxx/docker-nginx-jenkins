@@ -17,8 +17,11 @@ RUN apt-get update && \
 
 # Add scripts and configs
 COPY scripts/ /usr/local/bin/
-RUN chmod 755 /usr/local/bin/*
 COPY config/ /etc/nginx/
+
+RUN chmod 755 /usr/local/bin/* && \
+  mkdir -p /etc/nginx/sites-available \
+  mkdir -p /etc/nginx/sites-enabled
 
 # Expose ports
 EXPOSE 443/tcp
