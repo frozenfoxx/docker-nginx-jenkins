@@ -29,7 +29,7 @@ run_nginx()
   ln -s /etc/nginx/sites-available/jenkins /etc/nginx/sites-enabled/jenkins
 
   echo "Launching nginx..."
-  nginx
+  nginx $@
 }
 
 ## Display usage information
