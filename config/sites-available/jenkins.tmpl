@@ -3,9 +3,8 @@ upstream jenkins {
 }
 
 server {
-    listen 443;
+    listen 443 ssl;
     server_name _;
-    ssl on;
     ssl_certificate ${CERT_DIR}/${FQDN}.crt;
     ssl_certificate_key ${CERT_DIR}/${FQDN}.key;
     ssl_protocols TLSv1.2;
