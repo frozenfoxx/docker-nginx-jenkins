@@ -12,6 +12,7 @@ ENV BITS='2048' \
 
 # Add scripts and configs
 COPY scripts/ /usr/local/bin/
+RUN chmod 755 /usr/local/bin/*
 COPY config/ /etc/nginx/
 
 # Expose ports
