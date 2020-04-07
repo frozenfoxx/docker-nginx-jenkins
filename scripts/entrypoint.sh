@@ -36,6 +36,11 @@ run_nginx()
 usage()
 {
   echo "Usage: [Environment Variables] entrypoint.sh [options]"
+  echo "  Environment Variables:"
+  echo "    BITS                        number of bits for the SSL certificate (default: '2048')"
+  echo "    CERT_DIR                    directory containing SSL certificates (default: '/etc/ssl/certs')"
+  echo "    DAYS                        days to make a cert good for (default: '365')"
+  echo "    FQDN                        fully-qualified domain name for the host (default: 'jenkins.ucb.unityops.net')"
 }
 
 # Logic
