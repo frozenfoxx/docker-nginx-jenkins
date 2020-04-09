@@ -23,7 +23,7 @@ generate_ssl()
 run_nginx()
 {
   echo "Completing template..."
-  envsubst < "/etc/nginx/sites-available/jenkins.tmpl" > /etc/nginx/sites-available/jenkins
+  envsubst '${CERT_DIR},${FQDN}' < "/etc/nginx/sites-available/jenkins.tmpl" > /etc/nginx/sites-available/jenkins
 
   echo "Enabling site..."
   ln -s /etc/nginx/sites-available/jenkins /etc/nginx/sites-enabled/jenkins
@@ -40,7 +40,7 @@ usage()
   echo "    BITS                        number of bits for the SSL certificate (default: '2048')"
   echo "    CERT_DIR                    directory containing SSL certificates (default: '/etc/ssl/certs')"
   echo "    DAYS                        days to make a cert good for (default: '365')"
-  echo "    FQDN                        fully-qualified domain name for the host (default: 'jenkins.ucb.unityops.net')"
+  echo "    FQDN                        fully-qualified domain name for the host (default: 'jenkins.churchoffoxx.net')"
 }
 
 # Logic
