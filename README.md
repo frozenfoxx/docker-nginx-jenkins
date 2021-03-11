@@ -1,5 +1,7 @@
 # nginx-jenkins
 
+[![Build Status](https://cloud.drone.io/api/badges/frozenfoxx/docker-nginx-jenkins/status.svg?ref=refs/heads/main)](https://cloud.drone.io/frozenfoxx/docker-nginx-jenkins)
+
 Nginx reverse proxy for a local Jenkins.
 
 Docker: [https://hub.docker.com/repository/docker/frozenfoxx/nginx-jenkins](https://hub.docker.com/repository/docker/frozenfoxx/nginx-jenkins)
